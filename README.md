@@ -4,10 +4,10 @@
  i will achive two basic thigs in this, first i will explore a domain i was unawre of, that is the security and {might} i will make myself my own algoritmh of encryption, though it sound so stupid.
  i am really hoping to get to a summer interns by the end of the year. hope my work is enough!
 
-##Brute Force (cpp code)
+## Brute Force (cpp code)
 about this code, its a very basic brute force code trying to guess the final_key, just a demonstration how the length of key affects on cpu to find the key
 
-##Cude_boosted (Cuda)
+## Cude_boosted (Cuda)
 this one is the same thing as the Brute Force code, but uses GPU to crack the code, its pretty fast, to us ethis you nedd to build the .cu with cuda build.
 then us the excutable in terminal to make it run, its quite simple when you use vscode, btw it duh needs some installation and only works for the nvidia gpus,
 iam not botherd adding the installtion process, figure out yourself.
