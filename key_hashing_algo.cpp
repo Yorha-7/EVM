@@ -10,19 +10,39 @@ class codes {
     string data;
     string encoded_data;
     string decoded_data;
-    int data_indexes[100];   // <-- store mapping here
-    int count;               // length of data
+    int data_indexes[100];   
+    int count;              
 
-    codes() {
+    codes(string temp) {
         final_key = string(8, ' ');            
-        data = "This code is Coded by Yorha";             
+        data = temp;             
         encoded_data = string(data.length(), ' ');
         decoded_data = string(data.length(), ' ');
         for (int i = 0; i < 8; i++) {
             final_key[i] = (master_key[i] >= baby_key[i]) ? master_key[i] : baby_key[i];
         }
     }
-
+    void data_write(string temp){
+        data = temp;
+    }
+    
+    void bitlevel_mixing_encode(){
+        int k = 0;
+        for (int i = 0; i < data.length(); i++){
+            if (k > 7) k = 0;
+            encoded_data[i] = ((unsigned char)data[i] >> (final_key[k] % 8)) | ((unsigned char)data[i] << (8 - (final_key[k] % 8)));
+        }
+        cout<< "Encoding of bitlevel mixing: " << encoded_data << endl;
+    }
+    void bitlevel_mixing_decode(){
+        int k = 0;
+        for (int i = 0; i < data.length(); i++){
+            if (k > 7) k = 0;
+            decoded_data[i] = ((unsigned char)data[i] << (final_key[k] % 8)) | ((unsigned char)data[i] >> (8 - (final_key[k] % 8)));
+        }
+        cout<< "Decoding of bitlevel mixing: " << decoded_data << endl;
+    }
+    
     void xor_encoding(){
         count = data.length();
         int k = 0;
@@ -46,7 +66,7 @@ class codes {
     }
 
     void shift_encoding() {
-        
+        count = data.length();
         for (int i = 0; i < 8; i++) {
             final_key[i] = (master_key[i] >= baby_key[i]) ? master_key[i] : baby_key[i];
         }
@@ -88,6 +108,7 @@ class codes {
     }
 
     void shift_decoding() {
+        count = data.length();
         for (int i = 0; i < count; i++) {
             decoded_data[i] = encoded_data[data_indexes[i]];
         }
@@ -95,10 +116,10 @@ class codes {
     }
 };
 
-int main(){
-    codes code;
-    code.xor_encoding();
-    code.xor_decoding();
-    code.shift_encoding();
-    code.shift_decoding();
-}
+// int main(){
+//     codes code;
+//     code.xor_encoding();
+//     code.xor_decoding();
+//     code.shift_encoding();
+//     code.shift_decoding();
+// }
