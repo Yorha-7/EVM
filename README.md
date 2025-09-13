@@ -32,3 +32,7 @@ Shift decoding:  This Code is Coded by Yorha-7
 data is changed!!!!
 [1] + Done 
 ```
+## Encrypter Simulation Result.
+<img width="1290" height="1058" alt="Screenshot 2025-09-13 160746" src="https://github.com/user-attachments/assets/40cec56a-6344-41c0-b8ca-0cc794e68cf0" />
+## Encrypter Block Diagram.
+<img width="1508" height="318" alt="Screenshot 2025-09-13 160841" src="https://github.com/user-attachments/assets/f0fb2b7f-cc56-4935-b687-144619e626b6" />
