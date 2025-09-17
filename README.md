@@ -37,3 +37,48 @@ data is changed!!!!
 
 ## Encrypter Block Diagram.
 <img width="1508" height="318" alt="Screenshot 2025-09-13 160841" src="https://github.com/user-attachments/assets/f0fb2b7f-cc56-4935-b687-144619e626b6" />
+
+## Something about: DES brute force cracker
+
+i know its lame to evene trying to crack it by brute forcing, but some guy in 70's did it within 3 hours of that 64 bit key, man with the best computer (rpi 3B+) i did cracked the 32 bit key by brute force plus my DES is not even in its original standard, yhea but i did try to add elements of confusion and diffussion. i know no surprise but while doing that i made a cmake package taht is universal lib in your system that is ready to be imported in your cpp codes that will give ... ummmh i have special repo on that, no need to type in here. so check this results out, BTW my rpi was heating as hell , they are right when they say get yourself a heat sink, though rpi have inbuilt temperature regulaton so it will slow the perormance but it still works.
+
+```
+Take 1:
+Encrypted Data: ����od��
+Decrypted Data: abcdefgh
+Key used for decryption:        A
+Time taken to find key: 0.014647 seconds
+
+[Profiler] Execution Time: 15 ms
+[Profiler] Memory Usage: 0 KB
+                                  
+Take 2:
+Encrypted Data: ����Gl��
+Decrypted Data: abcdefgh
+Key used for decryption:       AA
+Time taken to find key: 0.722212 seconds
+
+[Profiler] Execution Time: 726 ms
+[Profiler] Memory Usage: 0 KB
+
+Take 3:
+Encrypted Data: �����L��
+Decrypted Data: abcdefgh
+Key used for decryption:      AAA
+Time taken to find key: 73.1843 seconds
+
+[Profiler] Execution Time: 73216 ms
+[Profiler] Memory Usage: 0 KB
+
+Take 4:
+Encrypted Data: �761e̘�
+Decrypted Data: abcdefgh
+Key used for decryption:     AAAA
+Time taken to find key: 6860.5 seconds
+
+[Profiler] Execution Time: 6863508 ms
+[Profiler] Memory Usage: 0 KB
+                 
+Take 5:
+to be calculated (waste of time)
+```
