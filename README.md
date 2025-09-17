@@ -37,6 +37,7 @@ data is changed!!!!
 
 ## Encrypter Block Diagram.
 <img width="1508" height="318" alt="Screenshot 2025-09-13 160841" src="https://github.com/user-attachments/assets/f0fb2b7f-cc56-4935-b687-144619e626b6" />
+
 ## Something about: DES brute force cracker
 
 i know its lame to evne trying to crack it by brute forcing, but some gut in 70's did it within 3 hours of that 64 bit key, man with the best computer (rpi 3B+) i did cracked the 32 bit key by brute force, i know no surprise but while
