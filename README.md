@@ -40,9 +40,7 @@ data is changed!!!!
 
 ## Something about: DES brute force cracker
 
-i know its lame to evene trying to crack it by brute forcing, but some guy in 70's did it within 3 hours of that 64 bit key, man with the best computer (rpi 3B+) i did cracked the 32 bit key by brute force, i know no surprise but while
-doing that i made a cmake package taht is universal lib in your system that is ready to be imported in your cpp codes that will give ... ummmh i have special repo on that, no need to type in here.
-so check this results out, BTW my rpi was heating as hell , they are right when they say get yourself a heat sink, though rpi have inbuilt temperature regulaton so it will slow the perormance but it still works.
+i know its lame to evene trying to crack it by brute forcing, but some guy in 70's did it within 3 hours of that 64 bit key, man with the best computer (rpi 3B+) i did cracked the 32 bit key by brute force plus my DES is not even in its original standard, yhea but i did try to add elements of confusion and diffussion. i know no surprise but while doing that i made a cmake package taht is universal lib in your system that is ready to be imported in your cpp codes that will give ... ummmh i have special repo on that, no need to type in here. so check this results out, BTW my rpi was heating as hell , they are right when they say get yourself a heat sink, though rpi have inbuilt temperature regulaton so it will slow the perormance but it still works.
 
 ```
 Take 1:
