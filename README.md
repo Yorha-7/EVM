@@ -3,6 +3,15 @@
  making a secured voting machine. So I thought, lets make one. umm not the voting machine, The security algorithm, this repo is like a tour to world of encryption and security.
  i will achive two basic thigs in this, first i will explore a domain i was unawre of, that is the security and {might} i will make myself my own algoritmh of encryption, though it sound so stupid. hope my work is enough!
 
+## Something about custom_encrypter_v2
+this packages consist of the source code for simulating the nature of 16 layer encryption algorithm which contains 3 major concept and methods from 3 diffrent algos. Mostly it is DES but to increase the 
+Diffussion i added more of the map scrambling after xoring with key and to generate a non repetative key i used the key mapping to generate confusion.
+no need to test for avalanche case cuz it already follow major principals, so it should work.
+
+also i ahve one more version of this brute force testing as brute_force_v2 file, the python script is a modiication from before which supports parrallel tasking on cpu and begineer friendly code to crack key using paralle computation.
+one more thing the pkg custom_encrypter_v2 is a cmake package ready to be installed as .deb to run it on linux uder apt package manager.
+and brute_force is just brute_force.
+
 ## Brute Force (cpp code)
 about this code, its a very basic brute force code trying to guess the final_key, just a demonstration how the length of key affects on cpu to find the key
 
