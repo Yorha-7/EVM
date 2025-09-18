@@ -1,4 +1,4 @@
-#include"main.hpp"
+#include"../include/main.hpp"
 #include<bitset>
 // this part of code library will contain some mixed algorithms and improvements based on the 
 // previous version of custom encrypter by adding more elemnts for confusion and diffusion
@@ -103,6 +103,14 @@ namespace encrypter {
         return final_key;
     }
     
+    string xor_key_data(string data, string key){
+        string final_data;
+        int key_len = key.length();
+        for (int i = 0; i < key_len; i++){
+            final_data += static_cast<char>(key[i] ^ data[i]);
+        }
+        return final_data;
+    }
 
 }
 
@@ -170,4 +178,14 @@ namespace decrypter {
         }
         return decoded_data;
     }
+    
+    string xor_key_data(string data, string key){
+        string final_data;
+        int key_len = key.length();
+        for (int i = 0; i < key_len; i++){
+            final_data += static_cast<char>(key[i] ^ data[i]);
+        }
+        return final_data;
+    }
+
 }
