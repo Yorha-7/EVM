@@ -1,4 +1,4 @@
-#include"../include/main.hpp"
+#include"main.hpp"
 #include<bitset>
 // this part of code library will contain some mixed algorithms and improvements based on the 
 // previous version of custom encrypter by adding more elemnts for confusion and diffusion

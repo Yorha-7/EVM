@@ -1,11 +1,12 @@
 #include <iostream>
 using namespace std;
 
-string master_key = "axYbjcd1";
-string baby_key   = "Babeigyl";
 
 class codes {
     public:
+    string master_key = "axYbjcd1";
+    string baby_key   = "Babeigyl";
+
     string final_key;
     string data;
     string encoded_data;

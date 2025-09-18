@@ -16,7 +16,7 @@ class Diffi_Hellman {
         return (base ^ initial_guess) % modular;
     }
     
-    u_int64_t create_key(u_int64_t other_value){
+    u_int64_t generate_key(u_int64_t other_value){
         return (other_value ^ initial_guess) % modular;
     }
 

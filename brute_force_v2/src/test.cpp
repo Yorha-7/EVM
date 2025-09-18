@@ -1,7 +1,7 @@
 #include"../include/main.hpp"
 string Encryption(string data){
     string round_key[16];
-    string key = "12345678";
+    string key = "!!!!!!!(";
     string cipher = data;
 
     for (int i = 0; i < 16 ; i++){

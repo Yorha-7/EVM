@@ -5,6 +5,9 @@ import subprocess
 import os
 import time
 from concurrent.futures import ProcessPoolExecutor
+import ctypes
+from multiprocessing import Value
+stop_flag = Value(ctypes.c_bool, False)
 alphabet = [chr(i) for i in range(33, 126)] 
 base = len(alphabet)
 key = "!!!!!!!!"  
@@ -68,16 +71,20 @@ def execute_in_parallel(start,end):
     #         return [key]
     results = []
     for n in range(start, end):
+        if stop_flag.value:
+            break
         key = int_to_str(n, 8)  
-        #print(f"Trying key: '{key}'")
+        print(f"Trying key: '{key}'")
         output = run_code(key)           
-        if "Decrypted Data" in output:
+        if "@b(DE&gh" in output:
             results.append(key)
+            stop_flag.value = True
+        
     return results
 
 if __name__ == "__main__":
     total_range = 93 ** 8 
-    workers = os.cpu_count()
+    workers = os.cpu_count() - 2
     chunck_size = total_range // workers
     
     with ProcessPoolExecutor(max_workers=workers) as executor:

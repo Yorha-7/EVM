@@ -45,7 +45,8 @@ namespace DES {
             
         return final_data;
     }
-        string key_left_circular_shift(string key, int times) {
+
+    string key_left_circular_shift(string key, int times) {
         string bit_string;
         string final_key;
         int len = key.length();
@@ -61,6 +62,7 @@ namespace DES {
         }
         return final_key;
     }
+    
     string xor_key_data(string data, string key){
         string final_data;
         int key_len = key.length();

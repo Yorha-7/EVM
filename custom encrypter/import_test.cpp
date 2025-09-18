@@ -1,4 +1,3 @@
-#include<iostream>
 #include "key_hashing_algo.cpp"
 
 // class Begin {

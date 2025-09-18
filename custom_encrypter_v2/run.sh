@@ -1,4 +1,4 @@
 #! /bin/bash
 
-g++ test.cpp main.hpp main.cpp -o run
+g++ src/test.cpp include/main.hpp src/main.cpp -l profiler -o run
 ./run
