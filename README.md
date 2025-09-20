@@ -105,7 +105,7 @@ any suggestions for other kinds of operations are welcomed.
 <img width="1070" height="112" alt="v2" src="https://github.com/user-attachments/assets/a0715d2b-5385-47d9-b3e1-c40b220eef3b" />
 
 ## The waveform for the simulation of encrypter
-the waves after data_out are actually the outputs of each layer to show they are perfectly running under procedural block.
+the waves after status are actually the outputs of each layer to show they are perfectly running under procedural block.
 <img width="1306" height="1061" alt="Screenshot 2025-09-20 212953" src="https://github.com/user-attachments/assets/c24e3b6f-a7a1-4e11-966e-4a3ad25356a1" />
 
 
