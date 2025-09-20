@@ -92,7 +92,20 @@ Take 5:<img width="1306" height="1061" alt="Screenshot 2025-09-20 212953" src="h
 
 to be calculated (waste of time)
 ```
+
+## Something about custom_encrypter_v2 designs
+
+finally I completed the hardware code for the custom_encrypter_v2, its the implemenatation of encryption algorithms that i simulated lately on the cpp under title custom_encrypter_v2,
+the results are as i expected, btw that is just one layer you are seeing of encryption, I have to create a register interface that the cpu are actually comfortable with to use and use the full 16 layers
+and the decrypter too, i belive making decrypter would be easy since i know the design of encrypter already, but i will take a break now, for a week maybe, i need to cover other things such as academics and assignments now.
+there might be some bugs in the design that i might know, the encryption model is so easy that even a child would figure it out, but bugs are bugs. Feel free to let me know the bugs that i might have missed, i only used xoring as key-data operation
+any suggestions for other kinds of operations are welcomed.
+
+## This is the Block Diagram of the encrypter
 <img width="1070" height="112" alt="v2" src="https://github.com/user-attachments/assets/a0715d2b-5385-47d9-b3e1-c40b220eef3b" />
+
+## The waveform for the simulation of encrypter
+the waves after data_out are actually the outputs of each layer to show they are perfectly running under procedural block.
 <img width="1306" height="1061" alt="Screenshot 2025-09-20 212953" src="https://github.com/user-attachments/assets/c24e3b6f-a7a1-4e11-966e-4a3ad25356a1" />
 
 
