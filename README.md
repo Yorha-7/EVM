@@ -40,10 +40,10 @@ Shift decoding:  This Code is Coded by Yorha-7
 data is changed!!!!
 [1] + Done 
 ```
-## Encrypter Simulation Result.
+## Encrypter Simulation Result (Combinotorial).
 <img width="1290" height="1058" alt="Screenshot 2025-09-13 160746" src="https://github.com/user-attachments/assets/40cec56a-6344-41c0-b8ca-0cc794e68cf0" />
 
-## Encrypter Block Diagram.
+## Encrypter Block Diagram (Combinotorial).
 <img width="1508" height="318" alt="Screenshot 2025-09-13 160841" src="https://github.com/user-attachments/assets/f0fb2b7f-cc56-4935-b687-144619e626b6" />
 
 ## Something about: DES brute force cracker
@@ -101,10 +101,10 @@ and the decrypter too, i belive making decrypter would be easy since i know the 
 there might be some bugs in the design that i might know, the encryption model is so easy that even a child would figure it out, but bugs are bugs. Feel free to let me know the bugs that i might have missed, i only used xoring as key-data operation
 any suggestions for other kinds of operations are welcomed.
 
-## This is the Block Diagram of the encrypter
+## This is the Block Diagram of the encrypter (Sequential).
 <img width="1070" height="112" alt="v2" src="https://github.com/user-attachments/assets/a0715d2b-5385-47d9-b3e1-c40b220eef3b" />
 
-## The waveform for the simulation of encrypter
+## The waveform for the simulation of encrypter (Sequential).
 the waves after status are actually the outputs of each layer to show they are perfectly running under procedural block.
 <img width="1306" height="1061" alt="Screenshot 2025-09-20 212953" src="https://github.com/user-attachments/assets/c24e3b6f-a7a1-4e11-966e-4a3ad25356a1" />
 
