@@ -84,10 +84,15 @@ Decrypted Data: abcdefgh
 Key used for decryption:     AAAA
 Time taken to find key: 6860.5 seconds
 
+
 [Profiler] Execution Time: 6863508 ms
 [Profiler] Memory Usage: 0 KB
                  
-Take 5:
+Take 5:<img width="1306" height="1061" alt="Screenshot 2025-09-20 212953" src="https://github.com/user-attachments/assets/c24e3b6f-a7a1-4e11-966e-4a3ad25356a1" />
+
 to be calculated (waste of time)
 ```
-<img width="2139" height="299" alt="Screenshot 2025-09-20 190954" src="https://github.com/user-attachments/assets/41784d3c-6a15-4e30-85cb-3ef82cc78fd5" />
+<img width="1070" height="112" alt="v2" src="https://github.com/user-attachments/assets/a0715d2b-5385-47d9-b3e1-c40b220eef3b" />
+<img width="1306" height="1061" alt="Screenshot 2025-09-20 212953" src="https://github.com/user-attachments/assets/c24e3b6f-a7a1-4e11-966e-4a3ad25356a1" />
+
+
