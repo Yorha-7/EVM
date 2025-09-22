@@ -88,8 +88,7 @@ Time taken to find key: 6860.5 seconds
 [Profiler] Execution Time: 6863508 ms
 [Profiler] Memory Usage: 0 KB
                  
-Take 5:<img width="1306" height="1061" alt="Screenshot 2025-09-20 212953" src="https://github.com/user-attachments/assets/c24e3b6f-a7a1-4e11-966e-4a3ad25356a1" />
-
+Take 5:
 to be calculated (waste of time)
 ```
 
