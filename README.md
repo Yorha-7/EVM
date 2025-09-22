@@ -108,4 +108,5 @@ any suggestions for other kinds of operations are welcomed.
 the waves after status are actually the outputs of each layer to show they are perfectly running under procedural block.
 <img width="1306" height="1061" alt="Screenshot 2025-09-20 212953" src="https://github.com/user-attachments/assets/c24e3b6f-a7a1-4e11-966e-4a3ad25356a1" />
 
-
+## Decrypter Simulation Result (sequential)
+<img width="653" height="533" alt="Decrypter" src="https://github.com/user-attachments/assets/34548192-a132-4a83-89f6-bf88e176043d" />
