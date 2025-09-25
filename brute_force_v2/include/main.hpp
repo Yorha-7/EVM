@@ -8,6 +8,7 @@ namespace encrypter {
     string inverse_permute_map1(string data);
     string xor_key_data(string data, string key);
     string key_left_circular_shift(string key, int times);
+    string noise(string data);
 }
 
 namespace decrypter {
@@ -15,4 +16,5 @@ namespace decrypter {
     string inverse_initial_permutation(string data);
     string inverse_permute_map1(string data);
     string xor_key_data(string data, string key);
+    string noise(string data);
 }

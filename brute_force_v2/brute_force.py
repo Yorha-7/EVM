@@ -74,7 +74,7 @@ def execute_in_parallel(start,end):
         if stop_flag.value:
             break
         key = int_to_str(n, 8)  
-        print(f"Trying key: '{key}'")
+        #print(f"Trying key: '{key}'")
         output = run_code(key)           
         if "@b(DE&gh" in output:
             results.append(key)

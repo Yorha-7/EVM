@@ -1,4 +1,4 @@
-#include"main.hpp"
+#include"../include/main.hpp"
 #include<bitset>
 // this part of code library will contain some mixed algorithms and improvements based on the 
 // previous version of custom encrypter by adding more elemnts for confusion and diffusion
@@ -111,7 +111,15 @@ namespace encrypter {
         }
         return final_data;
     }
-
+    
+    string noise(string data){
+        string final_data;
+        int map[data.length()] = {56,23,01,45,67,89,12,89};
+        for (int i = 0; i < data.length(); i++){
+            final_data += static_cast<char>(data[i] ^ map[i]);
+        }
+        return final_data;
+    }
 }
 
 namespace decrypter {
@@ -188,4 +196,12 @@ namespace decrypter {
         return final_data;
     }
 
+    string noise(string data){
+        string final_data;
+        int map[data.length()] = {56,23,01,45,67,89,12,89};
+        for (int i = 0; i < data.length(); i++){
+            final_data += static_cast<char>(data[i] ^ map[i]);
+        }
+        return final_data;
+    }
 }

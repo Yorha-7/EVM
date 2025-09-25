@@ -40,7 +40,7 @@ string Decryption(string data, string key){
 }
 
 int main(){
-    string data = "@b(DE&gh";
+    string data = "Jayeshth";
     string key ;
     string decrypted_data;
     string encrypted_data;
