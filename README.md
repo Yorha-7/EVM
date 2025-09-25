@@ -71,7 +71,7 @@ jayesh@Zero:~/Cpp/custom_encrypter_v2$
 
 ```
 
-Hold your horses, give a thinking before skiping ahead. look at the last test result. yes thats the key that causing an error like this. go ahead you have the source code in the custom_encrypter_v2 go crack yourself.
+Hold your horses, give a thinking before skiping ahead. look at the last test result. Yes thats the key that causing an error like this. Go ahead you have the source code in the custom_encrypter_v2 go crack yourself. 
 
 
 
