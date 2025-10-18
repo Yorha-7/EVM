@@ -3,77 +3,23 @@
  making a secured voting machine. So I thought, lets make one. umm not the voting machine, The security algorithm, this repo is like a tour to world of encryption and security.
  i will achive two basic thigs in this, first i will explore a domain i was unawre of, that is the security and {might} i will make myself my own algoritmh of encryption, though it sound so stupid. hope my work is enough!
 
+---
+
 ## New Update
+___BRAM_PUF___: I have uploaded my entire project directory with .xpr ready to be imported in xilix vivado. Thing is to give a unique identity for the hardware i was looking on youtube, there i watch the synopsis video explaining how SRAM PUF can change crytography and cybersecurity. So i went through a paper of some japnese and indian dude working together to demonstrate the APUF for hardware legitmacy test using the same fpga as i am using and a jetson nano. the APUF algorithm that i used is same as there, silightly diffrent, to make it in observable range of limited IO ports of the fpga fabric.
 
-i am no sure whats going on, but you remember i maded a custom_encrypter_v2, just now i added function to add some basic noise to remove the abality of cipher refelecting the common occurence of data bytes, and i just discovered something.
-for only this one specific key i got a weird output that could couse damage to the way data is encrypted and decrypted. though i have no clue for why other key examples it works but this one is giving weird output,
-there is a lot i can do to test exactly why this happens, offcourse i will and when i figure that out i am not posting that here, go figure ourt yourself, damn this kind of things should be on my github post.
+The main thing is that i have noted the results for this small scale research. <br>
 
-okk enough of this lets get to the point
-```
-jayesh@Zero:~/Cpp/custom_encrypter_v2$ ./run.sh
-Enter The Key (8 characters) : 12345678
-Original Data : @b(DE&gh
-Encrypted Data : 7�S_�(��
-Decrypted Data : @b(DE&gh
+<img name="Results" width="670" height="407" alt="Screenshot 2025-10-18 130641" src="https://github.com/user-attachments/assets/97b8b9d7-64a7-4aa6-a186-4bd95110caaa" />
 
-[Profiler] Execution Time: 3487 ms
-[Profiler] Memory Usage: 192 KB
-jayesh@Zero:~/Cpp/custom_encrypter_v2$ ./run.sh
-Enter The Key (8 characters) : 12121212
-Original Data : @b(DE&gh
-Encrypted Data : .u�*�ɪ.
-Decrypted Data : @b(DE&gh
+according to the PUF paper the unique and usbale Challenges were about 75 percent, currently with my data i am therotically close.
 
-[Profiler] Execution Time: 4844 ms
-[Profiler] Memory Usage: 384 KB
-jayesh@Zero:~/Cpp/custom_encrypter_v2$ ./run.sh
-Enter The Key (8 characters) : 11111111
-Original Data : @b(DE&gh
-Encrypted Data : ><IĽU�
-Decrypted Data : @b(DE&gh
+Conclusions:
+ - since research is already done i can relay on the fact that 75 percent of the total challenges are usable. so i will not pursue the robust way to test all the testcases.
+ - There might be a way that will allow me to floorplan my implemented design of diffrent blocks of fabric, that will give me uniqueness in Silicon structure, this way i will eliminate the need of testing this module on more than plus 10 fpga like the researchers.
+ - Now that i can see that APUF actually works, i can add more layers and coloumns to it to increases the complexity of output and generate a more advance form of hardware fingerprint, but before that i will need to figure out the signing with private key problem.
 
-[Profiler] Execution Time: 5514 ms
-[Profiler] Memory Usage: 384 KB
-jayesh@Zero:~/Cpp/custom_encrypter_v2$ ./run.sh
-Enter The Key (8 characters) : 22222222
-Original Data : @b(DE&gh
-Encrypted Data : B�\��m
-Decrypted Data : @b(DE&gh
-
-[Profiler] Execution Time: 4727 ms
-[Profiler] Memory Usage: 384 KB
-jayesh@Zero:~/Cpp/custom_encrypter_v2$ ./run.sh
-Enter The Key (8 characters) : 36985214
-Original Data : @b(DE&gh
-Encrypted Data : }��F�	�d
-Decrypted Data : @b(DE&gh
-
-[Profiler] Execution Time: 4726 ms
-[Profiler] Memory Usage: 384 KB
-jayesh@Zero:~/Cpp/custom_encrypter_v2$ ./run.sh
-Enter The Key (8 characters) : 14785236
-Original Data : @b(DE&gh
-Encrypted Data : ��d�w��N
-Decrypted Data : @b(DE&gh
-
-[Profiler] Execution Time: 3252 ms
-[Profiler] Memory Usage: 384 KB
-jayesh@Zero:~/Cpp/custom_encrypter_v2$ ./run.sh
-Enter The Key (8 characters) : 78945612
-Original Data : @b(DE&gh
-Encrypte/bp�ta : ?�
-Decrypted Data : @b(DE&gh
-
-[Profiler] Execution Time: 12451 ms
-[Profiler] Memory Usage: 384 KB
-jayesh@Zero:~/Cpp/custom_encrypter_v2$ 
-
-```
-
-Hold your horses, give a thinking before skiping ahead. look at the last test result. Yes thats the key that causing an error like this. Go ahead you have the source code in the custom_encrypter_v2 go crack yourself. 
-
-
+---
 
 ## Something about: custom_encrypter_v2
 this packages consist of the source code for simulating the nature of 16 layer encryption algorithm which contains 3 major concept and methods from 3 diffrent algos. Mostly it is DES but to increase the 
