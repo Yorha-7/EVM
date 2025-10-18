@@ -1,0 +1,936 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2025.1 (win64) Build 6140274 Thu May 22 00:12:29 MDT 2025
+| Date         : Sat Oct 18 12:29:21 2025
+| Host         : Zero running 64-bit major release  (build 9200)
+| Command      : report_timing_summary -max_paths 10 -routable_nets -report_unconstrained -file top_timing_summary_routed.rpt -pb top_timing_summary_routed.pb -rpx top_timing_summary_routed.rpx -warn_on_violation
+| Design       : top
+| Device       : 7a100t-csg324
+| Speed File   : -2  PRODUCTION 1.23 2018-06-13
+| Design State : Routed
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Timing Summary Report
+
+------------------------------------------------------------------------------------------------
+| Timer Settings
+| --------------
+------------------------------------------------------------------------------------------------
+
+  Enable Multi Corner Analysis               :  Yes
+  Enable Pessimism Removal                   :  Yes
+  Pessimism Removal Resolution               :  Nearest Common Node
+  Enable Input Delay Default Clock           :  No
+  Enable Preset / Clear Arcs                 :  No
+  Disable Flight Delays                      :  No
+  Ignore I/O Paths                           :  No
+  Timing Early Launch at Borrowing Latches   :  No
+  Borrow Time for Max Delay Exceptions       :  Yes
+  Merge Timing Exceptions                    :  Yes
+  Inter-SLR Compensation                     :  Conservative
+
+  Corner  Analyze    Analyze    
+  Name    Max Paths  Min Paths  
+  ------  ---------  ---------  
+  Slow    Yes        Yes        
+  Fast    Yes        Yes        
+
+
+------------------------------------------------------------------------------------------------
+| Report Methodology
+| ------------------
+------------------------------------------------------------------------------------------------
+
+Rule       Severity  Description                     Violations  
+---------  --------  ------------------------------  ----------  
+LUTAR-1    Warning   LUT drives async reset alert    16          
+TIMING-20  Warning   Non-clocked latch               16          
+LATCH-1    Advisory  Existing latches in the design  1           
+
+Note: This report is based on the most recent report_methodology run and may not be up-to-date. Run report_methodology on the current design for the latest report.
+
+
+
+check_timing report
+
+Table of Contents
+-----------------
+1. checking no_clock (208)
+2. checking constant_clock (0)
+3. checking pulse_width_clock (0)
+4. checking unconstrained_internal_endpoints (16)
+5. checking no_input_delay (13)
+6. checking no_output_delay (16)
+7. checking multiple_clock (0)
+8. checking generated_clocks (0)
+9. checking loops (0)
+10. checking partial_input_delay (0)
+11. checking partial_output_delay (0)
+12. checking latch_loops (0)
+
+1. checking no_clock (208)
+--------------------------
+ There are 16 register/latch pins with no clock driven by root clock pin: chal_i[0] (HIGH)
+
+ There are 16 register/latch pins with no clock driven by root clock pin: chal_i[10] (HIGH)
+
+ There are 16 register/latch pins with no clock driven by root clock pin: chal_i[11] (HIGH)
+
+ There are 16 register/latch pins with no clock driven by root clock pin: chal_i[1] (HIGH)
+
+ There are 16 register/latch pins with no clock driven by root clock pin: chal_i[2] (HIGH)
+
+ There are 16 register/latch pins with no clock driven by root clock pin: chal_i[3] (HIGH)
+
+ There are 16 register/latch pins with no clock driven by root clock pin: chal_i[4] (HIGH)
+
+ There are 16 register/latch pins with no clock driven by root clock pin: chal_i[5] (HIGH)
+
+ There are 16 register/latch pins with no clock driven by root clock pin: chal_i[6] (HIGH)
+
+ There are 16 register/latch pins with no clock driven by root clock pin: chal_i[7] (HIGH)
+
+ There are 16 register/latch pins with no clock driven by root clock pin: chal_i[8] (HIGH)
+
+ There are 16 register/latch pins with no clock driven by root clock pin: chal_i[9] (HIGH)
+
+ There are 16 register/latch pins with no clock driven by root clock pin: start (HIGH)
+
+
+2. checking constant_clock (0)
+------------------------------
+ There are 0 register/latch pins with constant_clock.
+
+
+3. checking pulse_width_clock (0)
+---------------------------------
+ There are 0 register/latch pins which need pulse_width check
+
+
+4. checking unconstrained_internal_endpoints (16)
+-------------------------------------------------
+ There are 16 pins that are not constrained for maximum delay. (HIGH)
+
+ There are 0 pins that are not constrained for maximum delay due to constant clock.
+
+
+5. checking no_input_delay (13)
+-------------------------------
+ There are 13 input ports with no input delay specified. (HIGH)
+
+ There are 0 input ports with no input delay but user has a false path constraint.
+
+
+6. checking no_output_delay (16)
+--------------------------------
+ There are 16 ports with no output delay specified. (HIGH)
+
+ There are 0 ports with no output delay but user has a false path constraint
+
+ There are 0 ports with no output delay but with a timing clock defined on it or propagating through it
+
+
+7. checking multiple_clock (0)
+------------------------------
+ There are 0 register/latch pins with multiple clocks.
+
+
+8. checking generated_clocks (0)
+--------------------------------
+ There are 0 generated clocks that are not connected to a clock source.
+
+
+9. checking loops (0)
+---------------------
+ There are 0 combinational loops in the design.
+
+
+10. checking partial_input_delay (0)
+------------------------------------
+ There are 0 input ports with partial input delay specified.
+
+
+11. checking partial_output_delay (0)
+-------------------------------------
+ There are 0 ports with partial output delay specified.
+
+
+12. checking latch_loops (0)
+----------------------------
+ There are 0 combinational latch loops in the design through latch input
+
+
+
+------------------------------------------------------------------------------------------------
+| Design Timing Summary
+| ---------------------
+------------------------------------------------------------------------------------------------
+
+    WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints     WPWS(ns)     TPWS(ns)  TPWS Failing Endpoints  TPWS Total Endpoints  
+    -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
+        inf        0.000                      0                   32          inf        0.000                      0                   32           NA           NA                      NA                    NA  
+
+
+There are no user specified timing constraints.
+
+
+------------------------------------------------------------------------------------------------
+| Clock Summary
+| -------------
+------------------------------------------------------------------------------------------------
+
+
+------------------------------------------------------------------------------------------------
+| Intra Clock Table
+| -----------------
+------------------------------------------------------------------------------------------------
+
+Clock             WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints     WPWS(ns)     TPWS(ns)  TPWS Failing Endpoints  TPWS Total Endpoints  
+-----             -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
+
+
+------------------------------------------------------------------------------------------------
+| Inter Clock Table
+| -----------------
+------------------------------------------------------------------------------------------------
+
+From Clock    To Clock          WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints  
+----------    --------          -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------  
+
+
+------------------------------------------------------------------------------------------------
+| Other Path Groups Table
+| -----------------------
+------------------------------------------------------------------------------------------------
+
+Path Group    From Clock    To Clock          WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints  
+----------    ----------    --------          -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------  
+
+
+------------------------------------------------------------------------------------------------
+| User Ignored Path Table
+| -----------------------
+------------------------------------------------------------------------------------------------
+
+Path Group    From Clock    To Clock    
+----------    ----------    --------    
+
+
+------------------------------------------------------------------------------------------------
+| Unconstrained Path Table
+| ------------------------
+------------------------------------------------------------------------------------------------
+
+Path Group    From Clock    To Clock    
+----------    ----------    --------    
+(none)                                    
+
+
+------------------------------------------------------------------------------------------------
+| Timing Details
+| --------------
+------------------------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------------
+Path Group:  (none)
+From Clock:  
+  To Clock:  
+
+Max Delay            32 Endpoints
+Min Delay            32 Endpoints
+--------------------------------------------------------------------------------------
+
+
+Max Delay Paths
+--------------------------------------------------------------------------------------
+Slack:                    inf
+  Source:                 start
+                            (input port)
+  Destination:            genblk1[2].DUT_2/out_reg/PRE
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        14.477ns  (logic 2.819ns (19.475%)  route 11.658ns (80.525%))
+  Logic Levels:           14  (IBUF=1 LUT2=1 LUT3=12)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    U12                                               0.000     0.000 f  start (IN)
+                         net (fo=0)                   0.000     0.000    start
+    U12                  IBUF (Prop_ibuf_I_O)         1.454     1.454 f  start_IBUF_inst/O
+                         net (fo=48, routed)          3.566     5.020    genblk1[2].DUT_1/path0[0]
+    SLICE_X8Y75          LUT3 (Prop_lut3_I0_O)        0.105     5.125 f  genblk1[2].DUT_1/path1_inferred_i_12/O
+                         net (fo=2, routed)           0.749     5.874    genblk1[2].DUT_1/path1[1]
+    SLICE_X7Y75          LUT3 (Prop_lut3_I2_O)        0.105     5.979 f  genblk1[2].DUT_1/path1_inferred_i_11/O
+                         net (fo=2, routed)           0.511     6.490    genblk1[2].DUT_1/path1[2]
+    SLICE_X7Y76          LUT3 (Prop_lut3_I0_O)        0.105     6.595 f  genblk1[2].DUT_1/path0_inferred_i_10/O
+                         net (fo=2, routed)           0.671     7.266    genblk1[2].DUT_1/path0[3]
+    SLICE_X6Y76          LUT3 (Prop_lut3_I0_O)        0.105     7.371 f  genblk1[2].DUT_1/path1_inferred_i_9/O
+                         net (fo=2, routed)           0.569     7.940    genblk1[2].DUT_1/path1[4]
+    SLICE_X6Y76          LUT3 (Prop_lut3_I0_O)        0.105     8.045 f  genblk1[2].DUT_1/path0_inferred_i_8/O
+                         net (fo=2, routed)           0.696     8.742    genblk1[2].DUT_1/path0[5]
+    SLICE_X2Y76          LUT3 (Prop_lut3_I0_O)        0.105     8.847 f  genblk1[2].DUT_1/path1_inferred_i_7/O
+                         net (fo=2, routed)           0.569     9.416    genblk1[2].DUT_1/path1[6]
+    SLICE_X2Y76          LUT3 (Prop_lut3_I0_O)        0.105     9.521 f  genblk1[2].DUT_1/path0_inferred_i_6/O
+                         net (fo=2, routed)           0.686    10.207    genblk1[2].DUT_1/path0[7]
+    SLICE_X2Y77          LUT3 (Prop_lut3_I0_O)        0.105    10.312 f  genblk1[2].DUT_1/path1_inferred_i_5/O
+                         net (fo=2, routed)           0.662    10.974    genblk1[2].DUT_1/path1[8]
+    SLICE_X1Y77          LUT3 (Prop_lut3_I2_O)        0.105    11.079 f  genblk1[2].DUT_1/path1_inferred_i_4/O
+                         net (fo=2, routed)           0.555    11.634    genblk1[2].DUT_1/path1[9]
+    SLICE_X1Y77          LUT3 (Prop_lut3_I0_O)        0.105    11.739 f  genblk1[2].DUT_1/path0_inferred_i_3/O
+                         net (fo=2, routed)           0.515    12.254    genblk1[2].DUT_1/path0[10]
+    SLICE_X0Y77          LUT3 (Prop_lut3_I0_O)        0.105    12.359 f  genblk1[2].DUT_1/path1_inferred_i_2/O
+                         net (fo=2, routed)           0.563    12.923    genblk1[2].DUT_1/path1[11]
+    SLICE_X0Y77          LUT3 (Prop_lut3_I0_O)        0.105    13.028 f  genblk1[2].DUT_1/path0_inferred_i_1/O
+                         net (fo=2, routed)           0.791    13.819    genblk1[2].DUT_2/out_reg_1[0]
+    SLICE_X0Y81          LUT2 (Prop_lut2_I0_O)        0.105    13.924 f  genblk1[2].DUT_2/out_reg_i_2__1/O
+                         net (fo=1, routed)           0.553    14.477    genblk1[2].DUT_2/out0
+    SLICE_X0Y81          LDPE                                         f  genblk1[2].DUT_2/out_reg/PRE
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 start
+                            (input port)
+  Destination:            genblk1[1].DUT_2/out_reg/PRE
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        14.146ns  (logic 2.938ns (20.772%)  route 11.208ns (79.228%))
+  Logic Levels:           15  (IBUF=1 LUT1=1 LUT2=1 LUT3=12)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    U12                                               0.000     0.000 r  start (IN)
+                         net (fo=0)                   0.000     0.000    start
+    U12                  IBUF (Prop_ibuf_I_O)         1.454     1.454 r  start_IBUF_inst/O
+                         net (fo=48, routed)          2.840     4.295    genblk1[1].DUT_1/path0[0]
+    SLICE_X7Y73          LUT1 (Prop_lut1_I0_O)        0.105     4.400 r  genblk1[1].DUT_1/path1_inst/O
+                         net (fo=2, routed)           0.126     4.525    genblk1[1].DUT_1/path1[0]
+    SLICE_X7Y73          LUT3 (Prop_lut3_I0_O)        0.105     4.630 r  genblk1[1].DUT_1/path0_inferred_i_12/O
+                         net (fo=2, routed)           0.671     5.301    genblk1[1].DUT_1/path0[1]
+    SLICE_X6Y73          LUT3 (Prop_lut3_I0_O)        0.105     5.406 r  genblk1[1].DUT_1/path1_inferred_i_11/O
+                         net (fo=2, routed)           0.569     5.975    genblk1[1].DUT_1/path1[2]
+    SLICE_X6Y73          LUT3 (Prop_lut3_I0_O)        0.105     6.080 r  genblk1[1].DUT_1/path0_inferred_i_10/O
+                         net (fo=2, routed)           0.750     6.830    genblk1[1].DUT_1/path0[3]
+    SLICE_X6Y75          LUT3 (Prop_lut3_I0_O)        0.105     6.935 r  genblk1[1].DUT_1/path1_inferred_i_9/O
+                         net (fo=2, routed)           0.569     7.504    genblk1[1].DUT_1/path1[4]
+    SLICE_X6Y75          LUT3 (Prop_lut3_I0_O)        0.105     7.609 r  genblk1[1].DUT_1/path0_inferred_i_8/O
+                         net (fo=2, routed)           0.660     8.269    genblk1[1].DUT_1/path0[5]
+    SLICE_X4Y75          LUT3 (Prop_lut3_I0_O)        0.105     8.374 r  genblk1[1].DUT_1/path1_inferred_i_7/O
+                         net (fo=2, routed)           0.563     8.938    genblk1[1].DUT_1/path1[6]
+    SLICE_X4Y75          LUT3 (Prop_lut3_I0_O)        0.105     9.043 r  genblk1[1].DUT_1/path0_inferred_i_6/O
+                         net (fo=2, routed)           0.797     9.840    genblk1[1].DUT_1/path0[7]
+    SLICE_X2Y77          LUT3 (Prop_lut3_I0_O)        0.105     9.945 r  genblk1[1].DUT_1/path1_inferred_i_5/O
+                         net (fo=2, routed)           0.923    10.868    genblk1[1].DUT_1/path1[8]
+    SLICE_X1Y79          LUT3 (Prop_lut3_I2_O)        0.105    10.973 r  genblk1[1].DUT_1/path1_inferred_i_4/O
+                         net (fo=2, routed)           0.555    11.528    genblk1[1].DUT_1/path1[9]
+    SLICE_X1Y79          LUT3 (Prop_lut3_I0_O)        0.105    11.633 r  genblk1[1].DUT_1/path0_inferred_i_3/O
+                         net (fo=2, routed)           0.434    12.067    genblk1[1].DUT_1/path0[10]
+    SLICE_X1Y80          LUT3 (Prop_lut3_I0_O)        0.105    12.172 r  genblk1[1].DUT_1/path1_inferred_i_2/O
+                         net (fo=2, routed)           0.558    12.730    genblk1[1].DUT_1/path1[11]
+    SLICE_X0Y80          LUT3 (Prop_lut3_I2_O)        0.105    12.835 r  genblk1[1].DUT_1/path1_inferred_i_1/O
+                         net (fo=2, routed)           0.699    13.534    genblk1[1].DUT_2/out_reg_0[0]
+    SLICE_X1Y80          LUT2 (Prop_lut2_I1_O)        0.119    13.653 f  genblk1[1].DUT_2/out_reg_i_2__0/O
+                         net (fo=1, routed)           0.493    14.146    genblk1[1].DUT_2/out0
+    SLICE_X1Y80          LDPE                                         f  genblk1[1].DUT_2/out_reg/PRE
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 start
+                            (input port)
+  Destination:            genblk1[3].DUT_2/out_reg/PRE
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        14.044ns  (logic 2.924ns (20.822%)  route 11.120ns (79.178%))
+  Logic Levels:           15  (IBUF=1 LUT1=1 LUT2=1 LUT3=12)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    U12                                               0.000     0.000 f  start (IN)
+                         net (fo=0)                   0.000     0.000    start
+    U12                  IBUF (Prop_ibuf_I_O)         1.454     1.454 f  start_IBUF_inst/O
+                         net (fo=48, routed)          2.761     4.215    genblk1[3].DUT_1/path0[0]
+    SLICE_X5Y74          LUT1 (Prop_lut1_I0_O)        0.105     4.320 f  genblk1[3].DUT_1/path1_inst/O
+                         net (fo=2, routed)           0.126     4.446    genblk1[3].DUT_1/path1[0]
+    SLICE_X5Y74          LUT3 (Prop_lut3_I0_O)        0.105     4.551 f  genblk1[3].DUT_1/path0_inferred_i_12/O
+                         net (fo=2, routed)           0.540     5.090    genblk1[3].DUT_1/path0[1]
+    SLICE_X5Y75          LUT3 (Prop_lut3_I2_O)        0.105     5.195 f  genblk1[3].DUT_1/path0_inferred_i_11/O
+                         net (fo=2, routed)           0.846     6.042    genblk1[3].DUT_1/path0[2]
+    SLICE_X7Y76          LUT3 (Prop_lut3_I0_O)        0.105     6.147 f  genblk1[3].DUT_1/path1_inferred_i_10/O
+                         net (fo=2, routed)           0.661     6.808    genblk1[3].DUT_1/path1[3]
+    SLICE_X5Y76          LUT3 (Prop_lut3_I2_O)        0.105     6.913 f  genblk1[3].DUT_1/path1_inferred_i_9/O
+                         net (fo=2, routed)           0.555     7.468    genblk1[3].DUT_1/path1[4]
+    SLICE_X5Y76          LUT3 (Prop_lut3_I0_O)        0.105     7.573 f  genblk1[3].DUT_1/path0_inferred_i_8/O
+                         net (fo=2, routed)           0.851     8.425    genblk1[3].DUT_1/path0[5]
+    SLICE_X2Y74          LUT3 (Prop_lut3_I0_O)        0.105     8.530 f  genblk1[3].DUT_1/path1_inferred_i_7/O
+                         net (fo=2, routed)           0.569     9.099    genblk1[3].DUT_1/path1[6]
+    SLICE_X2Y74          LUT3 (Prop_lut3_I0_O)        0.105     9.204 f  genblk1[3].DUT_1/path0_inferred_i_6/O
+                         net (fo=2, routed)           0.815    10.019    genblk1[3].DUT_1/path0[7]
+    SLICE_X0Y74          LUT3 (Prop_lut3_I0_O)        0.105    10.124 f  genblk1[3].DUT_1/path1_inferred_i_5/O
+                         net (fo=2, routed)           0.563    10.687    genblk1[3].DUT_1/path1[8]
+    SLICE_X0Y74          LUT3 (Prop_lut3_I0_O)        0.105    10.792 f  genblk1[3].DUT_1/path0_inferred_i_4/O
+                         net (fo=2, routed)           0.697    11.489    genblk1[3].DUT_1/path0[9]
+    SLICE_X0Y75          LUT3 (Prop_lut3_I0_O)        0.105    11.594 f  genblk1[3].DUT_1/path1_inferred_i_3/O
+                         net (fo=2, routed)           0.563    12.157    genblk1[3].DUT_1/path1[10]
+    SLICE_X0Y75          LUT3 (Prop_lut3_I0_O)        0.105    12.262 f  genblk1[3].DUT_1/path0_inferred_i_2/O
+                         net (fo=2, routed)           0.605    12.867    genblk1[3].DUT_1/path0[11]
+    SLICE_X0Y79          LUT3 (Prop_lut3_I2_O)        0.105    12.972 f  genblk1[3].DUT_1/path0_inferred_i_1/O
+                         net (fo=2, routed)           0.560    13.533    genblk1[3].DUT_2/out_reg_1[0]
+    SLICE_X0Y79          LUT2 (Prop_lut2_I0_O)        0.105    13.638 f  genblk1[3].DUT_2/out_reg_i_2__2/O
+                         net (fo=1, routed)           0.407    14.044    genblk1[3].DUT_2/out0
+    SLICE_X0Y79          LDPE                                         f  genblk1[3].DUT_2/out_reg/PRE
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 chal_i[0]
+                            (input port)
+  Destination:            genblk1[10].DUT_2/out_reg/PRE
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        14.027ns  (logic 2.774ns (19.773%)  route 11.254ns (80.227%))
+  Logic Levels:           14  (IBUF=1 LUT2=1 LUT3=12)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    J15                                               0.000     0.000 r  chal_i[0] (IN)
+                         net (fo=0)                   0.000     0.000    chal_i[0]
+    J15                  IBUF (Prop_ibuf_I_O)         1.409     1.409 r  chal_i_IBUF[0]_inst/O
+                         net (fo=32, routed)          3.383     4.792    genblk1[10].DUT_1/chal_i_IBUF[0]
+    SLICE_X9Y67          LUT3 (Prop_lut3_I1_O)        0.105     4.897 f  genblk1[10].DUT_1/path1_inferred_i_12/O
+                         net (fo=2, routed)           0.604     5.501    genblk1[10].DUT_1/path1[1]
+    SLICE_X8Y67          LUT3 (Prop_lut3_I2_O)        0.105     5.606 f  genblk1[10].DUT_1/path1_inferred_i_11/O
+                         net (fo=2, routed)           0.569     6.175    genblk1[10].DUT_1/path1[2]
+    SLICE_X8Y67          LUT3 (Prop_lut3_I0_O)        0.105     6.280 f  genblk1[10].DUT_1/path0_inferred_i_10/O
+                         net (fo=2, routed)           0.655     6.935    genblk1[10].DUT_1/path0[3]
+    SLICE_X8Y64          LUT3 (Prop_lut3_I0_O)        0.105     7.040 f  genblk1[10].DUT_1/path1_inferred_i_9/O
+                         net (fo=2, routed)           0.873     7.913    genblk1[10].DUT_1/path1[4]
+    SLICE_X5Y63          LUT3 (Prop_lut3_I2_O)        0.105     8.018 f  genblk1[10].DUT_1/path1_inferred_i_8/O
+                         net (fo=2, routed)           0.555     8.573    genblk1[10].DUT_1/path1[5]
+    SLICE_X5Y63          LUT3 (Prop_lut3_I0_O)        0.105     8.678 f  genblk1[10].DUT_1/path0_inferred_i_7/O
+                         net (fo=2, routed)           0.682     9.360    genblk1[10].DUT_1/path0[6]
+    SLICE_X2Y60          LUT3 (Prop_lut3_I0_O)        0.105     9.465 f  genblk1[10].DUT_1/path1_inferred_i_6/O
+                         net (fo=2, routed)           0.686    10.151    genblk1[10].DUT_1/path1[7]
+    SLICE_X2Y61          LUT3 (Prop_lut3_I2_O)        0.105    10.256 f  genblk1[10].DUT_1/path1_inferred_i_5/O
+                         net (fo=2, routed)           0.569    10.825    genblk1[10].DUT_1/path1[8]
+    SLICE_X2Y61          LUT3 (Prop_lut3_I0_O)        0.105    10.930 f  genblk1[10].DUT_1/path0_inferred_i_4/O
+                         net (fo=2, routed)           0.696    11.626    genblk1[10].DUT_1/path0[9]
+    SLICE_X2Y59          LUT3 (Prop_lut3_I0_O)        0.105    11.731 f  genblk1[10].DUT_1/path1_inferred_i_3/O
+                         net (fo=2, routed)           0.667    12.398    genblk1[10].DUT_1/path1[10]
+    SLICE_X2Y59          LUT3 (Prop_lut3_I0_O)        0.105    12.503 f  genblk1[10].DUT_1/path0_inferred_i_2/O
+                         net (fo=2, routed)           0.463    12.966    genblk1[10].DUT_1/path0[11]
+    SLICE_X1Y59          LUT3 (Prop_lut3_I2_O)        0.105    13.071 f  genblk1[10].DUT_1/path0_inferred_i_1/O
+                         net (fo=2, routed)           0.560    13.631    genblk1[10].DUT_2/out_reg_1[0]
+    SLICE_X1Y59          LUT2 (Prop_lut2_I0_O)        0.105    13.736 f  genblk1[10].DUT_2/out_reg_i_2__9/O
+                         net (fo=1, routed)           0.291    14.027    genblk1[10].DUT_2/out0
+    SLICE_X1Y59          LDPE                                         f  genblk1[10].DUT_2/out_reg/PRE
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 chal_i[0]
+                            (input port)
+  Destination:            genblk1[14].DUT_2/out_reg/PRE
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        13.966ns  (logic 2.774ns (19.859%)  route 11.193ns (80.141%))
+  Logic Levels:           14  (IBUF=1 LUT2=1 LUT3=12)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    J15                                               0.000     0.000 r  chal_i[0] (IN)
+                         net (fo=0)                   0.000     0.000    chal_i[0]
+    J15                  IBUF (Prop_ibuf_I_O)         1.409     1.409 r  chal_i_IBUF[0]_inst/O
+                         net (fo=32, routed)          3.243     4.651    genblk1[14].DUT_1/chal_i_IBUF[0]
+    SLICE_X9Y65          LUT3 (Prop_lut3_I1_O)        0.105     4.756 r  genblk1[14].DUT_1/path0_inferred_i_12/O
+                         net (fo=2, routed)           0.671     5.428    genblk1[14].DUT_1/path0[1]
+    SLICE_X8Y65          LUT3 (Prop_lut3_I0_O)        0.105     5.533 r  genblk1[14].DUT_1/path1_inferred_i_11/O
+                         net (fo=2, routed)           0.569     6.102    genblk1[14].DUT_1/path1[2]
+    SLICE_X8Y65          LUT3 (Prop_lut3_I0_O)        0.105     6.207 r  genblk1[14].DUT_1/path0_inferred_i_10/O
+                         net (fo=2, routed)           0.492     6.699    genblk1[14].DUT_1/path0[3]
+    SLICE_X8Y64          LUT3 (Prop_lut3_I0_O)        0.105     6.804 r  genblk1[14].DUT_1/path1_inferred_i_9/O
+                         net (fo=2, routed)           0.881     7.685    genblk1[14].DUT_1/path1[4]
+    SLICE_X6Y63          LUT3 (Prop_lut3_I2_O)        0.105     7.790 r  genblk1[14].DUT_1/path1_inferred_i_8/O
+                         net (fo=2, routed)           0.569     8.359    genblk1[14].DUT_1/path1[5]
+    SLICE_X6Y63          LUT3 (Prop_lut3_I0_O)        0.105     8.464 r  genblk1[14].DUT_1/path0_inferred_i_7/O
+                         net (fo=2, routed)           0.815     9.279    genblk1[14].DUT_1/path0[6]
+    SLICE_X4Y63          LUT3 (Prop_lut3_I0_O)        0.105     9.384 r  genblk1[14].DUT_1/path1_inferred_i_6/O
+                         net (fo=2, routed)           0.563     9.947    genblk1[14].DUT_1/path1[7]
+    SLICE_X4Y63          LUT3 (Prop_lut3_I0_O)        0.105    10.052 r  genblk1[14].DUT_1/path0_inferred_i_5/O
+                         net (fo=2, routed)           0.557    10.608    genblk1[14].DUT_1/path0[8]
+    SLICE_X2Y62          LUT3 (Prop_lut3_I0_O)        0.105    10.713 r  genblk1[14].DUT_1/path1_inferred_i_4/O
+                         net (fo=2, routed)           0.569    11.282    genblk1[14].DUT_1/path1[9]
+    SLICE_X2Y62          LUT3 (Prop_lut3_I0_O)        0.105    11.387 r  genblk1[14].DUT_1/path0_inferred_i_3/O
+                         net (fo=2, routed)           0.528    11.915    genblk1[14].DUT_1/path0[10]
+    SLICE_X0Y61          LUT3 (Prop_lut3_I0_O)        0.105    12.020 r  genblk1[14].DUT_1/path1_inferred_i_2/O
+                         net (fo=2, routed)           0.661    12.682    genblk1[14].DUT_1/path1[11]
+    SLICE_X0Y62          LUT3 (Prop_lut3_I2_O)        0.105    12.787 r  genblk1[14].DUT_1/path1_inferred_i_1/O
+                         net (fo=2, routed)           0.668    13.455    genblk1[14].DUT_2/out_reg_0[0]
+    SLICE_X0Y61          LUT2 (Prop_lut2_I1_O)        0.105    13.560 f  genblk1[14].DUT_2/out_reg_i_2__13/O
+                         net (fo=1, routed)           0.407    13.966    genblk1[14].DUT_2/out0
+    SLICE_X0Y61          LDPE                                         f  genblk1[14].DUT_2/out_reg/PRE
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 start
+                            (input port)
+  Destination:            genblk1[4].DUT_2/out_reg/PRE
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        13.745ns  (logic 2.924ns (21.276%)  route 10.820ns (78.724%))
+  Logic Levels:           15  (IBUF=1 LUT1=1 LUT2=1 LUT3=12)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    U12                                               0.000     0.000 f  start (IN)
+                         net (fo=0)                   0.000     0.000    start
+    U12                  IBUF (Prop_ibuf_I_O)         1.454     1.454 f  start_IBUF_inst/O
+                         net (fo=48, routed)          2.571     4.026    genblk1[4].DUT_1/path0[0]
+    SLICE_X6Y72          LUT1 (Prop_lut1_I0_O)        0.105     4.131 f  genblk1[4].DUT_1/path1_inst/O
+                         net (fo=2, routed)           0.684     4.814    genblk1[4].DUT_1/path1[0]
+    SLICE_X3Y72          LUT3 (Prop_lut3_I2_O)        0.105     4.919 f  genblk1[4].DUT_1/path1_inferred_i_12/O
+                         net (fo=2, routed)           0.555     5.475    genblk1[4].DUT_1/path1[1]
+    SLICE_X3Y72          LUT3 (Prop_lut3_I0_O)        0.105     5.580 f  genblk1[4].DUT_1/path0_inferred_i_11/O
+                         net (fo=2, routed)           0.423     6.003    genblk1[4].DUT_1/path0[2]
+    SLICE_X2Y72          LUT3 (Prop_lut3_I2_O)        0.105     6.108 f  genblk1[4].DUT_1/path0_inferred_i_10/O
+                         net (fo=2, routed)           0.816     6.924    genblk1[4].DUT_1/path0[3]
+    SLICE_X2Y73          LUT3 (Prop_lut3_I0_O)        0.105     7.029 f  genblk1[4].DUT_1/path1_inferred_i_9/O
+                         net (fo=2, routed)           0.569     7.598    genblk1[4].DUT_1/path1[4]
+    SLICE_X2Y73          LUT3 (Prop_lut3_I0_O)        0.105     7.703 f  genblk1[4].DUT_1/path0_inferred_i_8/O
+                         net (fo=2, routed)           0.672     8.375    genblk1[4].DUT_1/path0[5]
+    SLICE_X3Y74          LUT3 (Prop_lut3_I0_O)        0.105     8.480 f  genblk1[4].DUT_1/path1_inferred_i_7/O
+                         net (fo=2, routed)           0.555     9.036    genblk1[4].DUT_1/path1[6]
+    SLICE_X3Y74          LUT3 (Prop_lut3_I0_O)        0.105     9.141 f  genblk1[4].DUT_1/path0_inferred_i_6/O
+                         net (fo=2, routed)           0.694     9.835    genblk1[4].DUT_1/path0[7]
+    SLICE_X3Y75          LUT3 (Prop_lut3_I2_O)        0.105     9.940 f  genblk1[4].DUT_1/path0_inferred_i_5/O
+                         net (fo=2, routed)           0.622    10.562    genblk1[4].DUT_1/path0[8]
+    SLICE_X2Y79          LUT3 (Prop_lut3_I0_O)        0.105    10.667 f  genblk1[4].DUT_1/path1_inferred_i_4/O
+                         net (fo=2, routed)           0.569    11.236    genblk1[4].DUT_1/path1[9]
+    SLICE_X2Y79          LUT3 (Prop_lut3_I0_O)        0.105    11.341 f  genblk1[4].DUT_1/path0_inferred_i_3/O
+                         net (fo=2, routed)           0.686    12.027    genblk1[4].DUT_1/path0[10]
+    SLICE_X2Y80          LUT3 (Prop_lut3_I0_O)        0.105    12.132 f  genblk1[4].DUT_1/path1_inferred_i_2/O
+                         net (fo=2, routed)           0.569    12.701    genblk1[4].DUT_1/path1[11]
+    SLICE_X2Y80          LUT3 (Prop_lut3_I0_O)        0.105    12.806 f  genblk1[4].DUT_1/path0_inferred_i_1/O
+                         net (fo=2, routed)           0.342    13.149    genblk1[4].DUT_2/out_reg_1[0]
+    SLICE_X2Y81          LUT2 (Prop_lut2_I0_O)        0.105    13.254 f  genblk1[4].DUT_2/out_reg_i_2__3/O
+                         net (fo=1, routed)           0.491    13.745    genblk1[4].DUT_2/out0
+    SLICE_X2Y81          LDPE                                         f  genblk1[4].DUT_2/out_reg/PRE
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 start
+                            (input port)
+  Destination:            genblk1[0].DUT_2/out_reg/PRE
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        13.666ns  (logic 2.927ns (21.421%)  route 10.739ns (78.579%))
+  Logic Levels:           15  (IBUF=1 LUT1=1 LUT2=1 LUT3=12)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    U12                                               0.000     0.000 f  start (IN)
+                         net (fo=0)                   0.000     0.000    start
+    U12                  IBUF (Prop_ibuf_I_O)         1.454     1.454 f  start_IBUF_inst/O
+                         net (fo=48, routed)          3.371     4.825    genblk1[0].DUT_1/path0[0]
+    SLICE_X5Y77          LUT1 (Prop_lut1_I0_O)        0.105     4.930 f  genblk1[0].DUT_1/path1_inst/O
+                         net (fo=2, routed)           0.126     5.056    genblk1[0].DUT_1/path1[0]
+    SLICE_X5Y77          LUT3 (Prop_lut3_I0_O)        0.105     5.161 f  genblk1[0].DUT_1/path0_inferred_i_12/O
+                         net (fo=2, routed)           0.662     5.823    genblk1[0].DUT_1/path0[1]
+    SLICE_X4Y77          LUT3 (Prop_lut3_I0_O)        0.105     5.928 f  genblk1[0].DUT_1/path1_inferred_i_11/O
+                         net (fo=2, routed)           0.227     6.155    genblk1[0].DUT_1/path1[2]
+    SLICE_X4Y77          LUT3 (Prop_lut3_I2_O)        0.105     6.260 f  genblk1[0].DUT_1/path1_inferred_i_10/O
+                         net (fo=2, routed)           0.661     6.921    genblk1[0].DUT_1/path1[3]
+    SLICE_X4Y76          LUT3 (Prop_lut3_I2_O)        0.105     7.026 f  genblk1[0].DUT_1/path1_inferred_i_9/O
+                         net (fo=2, routed)           0.563     7.589    genblk1[0].DUT_1/path1[4]
+    SLICE_X4Y76          LUT3 (Prop_lut3_I0_O)        0.105     7.694 f  genblk1[0].DUT_1/path0_inferred_i_8/O
+                         net (fo=2, routed)           0.689     8.383    genblk1[0].DUT_1/path0[5]
+    SLICE_X3Y76          LUT3 (Prop_lut3_I0_O)        0.105     8.488 f  genblk1[0].DUT_1/path1_inferred_i_7/O
+                         net (fo=2, routed)           0.555     9.044    genblk1[0].DUT_1/path1[6]
+    SLICE_X3Y76          LUT3 (Prop_lut3_I0_O)        0.105     9.149 f  genblk1[0].DUT_1/path0_inferred_i_6/O
+                         net (fo=2, routed)           0.515     9.664    genblk1[0].DUT_1/path0[7]
+    SLICE_X3Y75          LUT3 (Prop_lut3_I0_O)        0.105     9.769 f  genblk1[0].DUT_1/path1_inferred_i_5/O
+                         net (fo=2, routed)           0.555    10.324    genblk1[0].DUT_1/path1[8]
+    SLICE_X2Y75          LUT3 (Prop_lut3_I0_O)        0.105    10.429 f  genblk1[0].DUT_1/path0_inferred_i_4/O
+                         net (fo=2, routed)           0.801    11.230    genblk1[0].DUT_1/path0[9]
+    SLICE_X0Y78          LUT3 (Prop_lut3_I0_O)        0.105    11.335 f  genblk1[0].DUT_1/path1_inferred_i_3/O
+                         net (fo=2, routed)           0.563    11.898    genblk1[0].DUT_1/path1[10]
+    SLICE_X0Y78          LUT3 (Prop_lut3_I0_O)        0.105    12.003 f  genblk1[0].DUT_1/path0_inferred_i_2/O
+                         net (fo=2, routed)           0.530    12.533    genblk1[0].DUT_1/path0[11]
+    SLICE_X0Y80          LUT3 (Prop_lut3_I2_O)        0.105    12.638 f  genblk1[0].DUT_1/path0_inferred_i_1/O
+                         net (fo=2, routed)           0.221    12.859    genblk1[0].DUT_2/out_reg_1[0]
+    SLICE_X0Y80          LUT2 (Prop_lut2_I0_O)        0.108    12.967 f  genblk1[0].DUT_2/out_reg_i_2/O
+                         net (fo=1, routed)           0.699    13.666    genblk1[0].DUT_2/out0
+    SLICE_X0Y80          LDPE                                         f  genblk1[0].DUT_2/out_reg/PRE
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 chal_i[0]
+                            (input port)
+  Destination:            genblk1[7].DUT_2/out_reg/PRE
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        13.386ns  (logic 2.774ns (20.720%)  route 10.612ns (79.280%))
+  Logic Levels:           14  (IBUF=1 LUT2=1 LUT3=12)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    J15                                               0.000     0.000 r  chal_i[0] (IN)
+                         net (fo=0)                   0.000     0.000    chal_i[0]
+    J15                  IBUF (Prop_ibuf_I_O)         1.409     1.409 r  chal_i_IBUF[0]_inst/O
+                         net (fo=32, routed)          3.605     5.013    genblk1[7].DUT_1/chal_i_IBUF[0]
+    SLICE_X8Y68          LUT3 (Prop_lut3_I1_O)        0.105     5.118 f  genblk1[7].DUT_1/path0_inferred_i_12/O
+                         net (fo=2, routed)           0.370     5.489    genblk1[7].DUT_1/path0[1]
+    SLICE_X8Y68          LUT3 (Prop_lut3_I2_O)        0.105     5.594 f  genblk1[7].DUT_1/path0_inferred_i_11/O
+                         net (fo=2, routed)           0.757     6.351    genblk1[7].DUT_1/path0[2]
+    SLICE_X7Y68          LUT3 (Prop_lut3_I0_O)        0.105     6.456 f  genblk1[7].DUT_1/path1_inferred_i_10/O
+                         net (fo=2, routed)           0.356     6.812    genblk1[7].DUT_1/path1[3]
+    SLICE_X7Y68          LUT3 (Prop_lut3_I2_O)        0.105     6.917 f  genblk1[7].DUT_1/path1_inferred_i_9/O
+                         net (fo=2, routed)           0.602     7.519    genblk1[7].DUT_1/path1[4]
+    SLICE_X3Y67          LUT3 (Prop_lut3_I2_O)        0.105     7.624 f  genblk1[7].DUT_1/path1_inferred_i_8/O
+                         net (fo=2, routed)           0.555     8.179    genblk1[7].DUT_1/path1[5]
+    SLICE_X3Y67          LUT3 (Prop_lut3_I0_O)        0.105     8.284 f  genblk1[7].DUT_1/path0_inferred_i_7/O
+                         net (fo=2, routed)           0.668     8.952    genblk1[7].DUT_1/path0[6]
+    SLICE_X3Y66          LUT3 (Prop_lut3_I0_O)        0.105     9.057 f  genblk1[7].DUT_1/path1_inferred_i_6/O
+                         net (fo=2, routed)           0.555     9.613    genblk1[7].DUT_1/path1[7]
+    SLICE_X3Y66          LUT3 (Prop_lut3_I0_O)        0.105     9.718 f  genblk1[7].DUT_1/path0_inferred_i_5/O
+                         net (fo=2, routed)           0.540    10.258    genblk1[7].DUT_1/path0[8]
+    SLICE_X2Y66          LUT3 (Prop_lut3_I0_O)        0.105    10.363 f  genblk1[7].DUT_1/path1_inferred_i_4/O
+                         net (fo=2, routed)           0.569    10.932    genblk1[7].DUT_1/path1[9]
+    SLICE_X2Y66          LUT3 (Prop_lut3_I0_O)        0.105    11.037 f  genblk1[7].DUT_1/path0_inferred_i_3/O
+                         net (fo=2, routed)           0.672    11.709    genblk1[7].DUT_1/path0[10]
+    SLICE_X1Y66          LUT3 (Prop_lut3_I0_O)        0.105    11.814 f  genblk1[7].DUT_1/path1_inferred_i_2/O
+                         net (fo=2, routed)           0.555    12.370    genblk1[7].DUT_1/path1[11]
+    SLICE_X1Y66          LUT3 (Prop_lut3_I0_O)        0.105    12.475 f  genblk1[7].DUT_1/path0_inferred_i_1/O
+                         net (fo=2, routed)           0.515    12.990    genblk1[7].DUT_2/out_reg_1[0]
+    SLICE_X1Y65          LUT2 (Prop_lut2_I0_O)        0.105    13.095 f  genblk1[7].DUT_2/out_reg_i_2__6/O
+                         net (fo=1, routed)           0.291    13.386    genblk1[7].DUT_2/out0
+    SLICE_X1Y65          LDPE                                         f  genblk1[7].DUT_2/out_reg/PRE
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 chal_i[0]
+                            (input port)
+  Destination:            genblk1[15].DUT_2/out_reg/PRE
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        13.013ns  (logic 2.774ns (21.315%)  route 10.239ns (78.685%))
+  Logic Levels:           14  (IBUF=1 LUT2=1 LUT3=12)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    J15                                               0.000     0.000 r  chal_i[0] (IN)
+                         net (fo=0)                   0.000     0.000    chal_i[0]
+    J15                  IBUF (Prop_ibuf_I_O)         1.409     1.409 r  chal_i_IBUF[0]_inst/O
+                         net (fo=32, routed)          3.013     4.422    genblk1[15].DUT_1/chal_i_IBUF[0]
+    SLICE_X7Y64          LUT3 (Prop_lut3_I1_O)        0.105     4.527 r  genblk1[15].DUT_1/path1_inferred_i_12/O
+                         net (fo=2, routed)           0.555     5.082    genblk1[15].DUT_1/path1[1]
+    SLICE_X7Y64          LUT3 (Prop_lut3_I0_O)        0.105     5.187 r  genblk1[15].DUT_1/path0_inferred_i_11/O
+                         net (fo=2, routed)           0.424     5.611    genblk1[15].DUT_1/path0[2]
+    SLICE_X6Y64          LUT3 (Prop_lut3_I2_O)        0.105     5.716 r  genblk1[15].DUT_1/path0_inferred_i_10/O
+                         net (fo=2, routed)           0.576     6.293    genblk1[15].DUT_1/path0[3]
+    SLICE_X6Y64          LUT3 (Prop_lut3_I0_O)        0.105     6.398 r  genblk1[15].DUT_1/path1_inferred_i_9/O
+                         net (fo=2, routed)           0.490     6.887    genblk1[15].DUT_1/path1[4]
+    SLICE_X6Y65          LUT3 (Prop_lut3_I2_O)        0.105     6.992 r  genblk1[15].DUT_1/path1_inferred_i_8/O
+                         net (fo=2, routed)           0.569     7.561    genblk1[15].DUT_1/path1[5]
+    SLICE_X6Y65          LUT3 (Prop_lut3_I0_O)        0.105     7.666 r  genblk1[15].DUT_1/path0_inferred_i_7/O
+                         net (fo=2, routed)           0.660     8.327    genblk1[15].DUT_1/path0[6]
+    SLICE_X4Y65          LUT3 (Prop_lut3_I2_O)        0.105     8.432 r  genblk1[15].DUT_1/path0_inferred_i_6/O
+                         net (fo=2, routed)           0.557     8.988    genblk1[15].DUT_1/path0[7]
+    SLICE_X2Y64          LUT3 (Prop_lut3_I0_O)        0.105     9.093 r  genblk1[15].DUT_1/path1_inferred_i_5/O
+                         net (fo=2, routed)           0.569     9.662    genblk1[15].DUT_1/path1[8]
+    SLICE_X2Y64          LUT3 (Prop_lut3_I0_O)        0.105     9.767 r  genblk1[15].DUT_1/path0_inferred_i_4/O
+                         net (fo=2, routed)           0.515    10.282    genblk1[15].DUT_1/path0[9]
+    SLICE_X0Y63          LUT3 (Prop_lut3_I0_O)        0.105    10.387 r  genblk1[15].DUT_1/path1_inferred_i_3/O
+                         net (fo=2, routed)           0.563    10.951    genblk1[15].DUT_1/path1[10]
+    SLICE_X0Y63          LUT3 (Prop_lut3_I0_O)        0.105    11.056 r  genblk1[15].DUT_1/path0_inferred_i_2/O
+                         net (fo=2, routed)           0.790    11.846    genblk1[15].DUT_1/path0[11]
+    SLICE_X0Y60          LUT3 (Prop_lut3_I0_O)        0.105    11.951 r  genblk1[15].DUT_1/path1_inferred_i_1/O
+                         net (fo=2, routed)           0.554    12.505    genblk1[15].DUT_2/out_reg_0[0]
+    SLICE_X1Y60          LUT2 (Prop_lut2_I1_O)        0.105    12.610 f  genblk1[15].DUT_2/out_reg_i_2__14/O
+                         net (fo=1, routed)           0.403    13.013    genblk1[15].DUT_2/out0
+    SLICE_X1Y60          LDPE                                         f  genblk1[15].DUT_2/out_reg/PRE
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 start
+                            (input port)
+  Destination:            genblk1[9].DUT_2/out_reg/PRE
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        12.754ns  (logic 2.924ns (22.929%)  route 9.830ns (77.071%))
+  Logic Levels:           15  (IBUF=1 LUT1=1 LUT2=1 LUT3=12)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    U12                                               0.000     0.000 f  start (IN)
+                         net (fo=0)                   0.000     0.000    start
+    U12                  IBUF (Prop_ibuf_I_O)         1.454     1.454 f  start_IBUF_inst/O
+                         net (fo=48, routed)          2.584     4.039    genblk1[9].DUT_1/path0[0]
+    SLICE_X7Y71          LUT1 (Prop_lut1_I0_O)        0.105     4.144 f  genblk1[9].DUT_1/path1_inst/O
+                         net (fo=2, routed)           0.126     4.269    genblk1[9].DUT_1/path1[0]
+    SLICE_X7Y71          LUT3 (Prop_lut3_I0_O)        0.105     4.374 f  genblk1[9].DUT_1/path0_inferred_i_12/O
+                         net (fo=2, routed)           0.671     5.046    genblk1[9].DUT_1/path0[1]
+    SLICE_X6Y71          LUT3 (Prop_lut3_I0_O)        0.105     5.151 f  genblk1[9].DUT_1/path1_inferred_i_11/O
+                         net (fo=2, routed)           0.569     5.720    genblk1[9].DUT_1/path1[2]
+    SLICE_X6Y71          LUT3 (Prop_lut3_I0_O)        0.105     5.825 f  genblk1[9].DUT_1/path0_inferred_i_10/O
+                         net (fo=2, routed)           0.399     6.224    genblk1[9].DUT_1/path0[3]
+    SLICE_X4Y71          LUT3 (Prop_lut3_I2_O)        0.105     6.329 f  genblk1[9].DUT_1/path0_inferred_i_9/O
+                         net (fo=2, routed)           0.468     6.796    genblk1[9].DUT_1/path0[4]
+    SLICE_X4Y72          LUT3 (Prop_lut3_I0_O)        0.105     6.901 f  genblk1[9].DUT_1/path1_inferred_i_8/O
+                         net (fo=2, routed)           0.563     7.465    genblk1[9].DUT_1/path1[5]
+    SLICE_X4Y72          LUT3 (Prop_lut3_I0_O)        0.105     7.570 f  genblk1[9].DUT_1/path0_inferred_i_7/O
+                         net (fo=2, routed)           0.602     8.172    genblk1[9].DUT_1/path0[6]
+    SLICE_X3Y73          LUT3 (Prop_lut3_I0_O)        0.105     8.277 f  genblk1[9].DUT_1/path1_inferred_i_6/O
+                         net (fo=2, routed)           0.555     8.833    genblk1[9].DUT_1/path1[7]
+    SLICE_X3Y73          LUT3 (Prop_lut3_I0_O)        0.105     8.938 f  genblk1[9].DUT_1/path0_inferred_i_5/O
+                         net (fo=2, routed)           0.814     9.751    genblk1[9].DUT_1/path0[8]
+    SLICE_X0Y73          LUT3 (Prop_lut3_I0_O)        0.105     9.856 f  genblk1[9].DUT_1/path1_inferred_i_4/O
+                         net (fo=2, routed)           0.563    10.420    genblk1[9].DUT_1/path1[9]
+    SLICE_X0Y73          LUT3 (Prop_lut3_I0_O)        0.105    10.525 f  genblk1[9].DUT_1/path0_inferred_i_3/O
+                         net (fo=2, routed)           0.668    11.193    genblk1[9].DUT_1/path0[10]
+    SLICE_X0Y72          LUT3 (Prop_lut3_I0_O)        0.105    11.298 f  genblk1[9].DUT_1/path1_inferred_i_2/O
+                         net (fo=2, routed)           0.563    11.861    genblk1[9].DUT_1/path1[11]
+    SLICE_X0Y72          LUT3 (Prop_lut3_I0_O)        0.105    11.966 f  genblk1[9].DUT_1/path0_inferred_i_1/O
+                         net (fo=2, routed)           0.249    12.215    genblk1[9].DUT_2/out_reg_1[0]
+    SLICE_X2Y72          LUT2 (Prop_lut2_I0_O)        0.105    12.320 f  genblk1[9].DUT_2/out_reg_i_2__8/O
+                         net (fo=1, routed)           0.434    12.754    genblk1[9].DUT_2/out0
+    SLICE_X2Y72          LDPE                                         f  genblk1[9].DUT_2/out_reg/PRE
+  -------------------------------------------------------------------    -------------------
+
+
+
+
+
+Min Delay Paths
+--------------------------------------------------------------------------------------
+Slack:                    inf
+  Source:                 chal_i[11]
+                            (input port)
+  Destination:            genblk1[10].DUT_2/out_reg/PRE
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        1.028ns  (logic 0.360ns (35.002%)  route 0.668ns (64.998%))
+  Logic Levels:           3  (IBUF=1 LUT2=1 LUT3=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    T13                                               0.000     0.000 r  chal_i[11] (IN)
+                         net (fo=0)                   0.000     0.000    chal_i[11]
+    T13                  IBUF (Prop_ibuf_I_O)         0.270     0.270 r  chal_i_IBUF[11]_inst/O
+                         net (fo=32, routed)          0.492     0.761    genblk1[10].DUT_1/chal_i_IBUF[11]
+    SLICE_X1Y59          LUT3 (Prop_lut3_I1_O)        0.045     0.806 r  genblk1[10].DUT_1/path1_inferred_i_1/O
+                         net (fo=2, routed)           0.060     0.867    genblk1[10].DUT_2/out_reg_0[0]
+    SLICE_X1Y59          LUT2 (Prop_lut2_I1_O)        0.045     0.912 f  genblk1[10].DUT_2/out_reg_i_2__9/O
+                         net (fo=1, routed)           0.116     1.028    genblk1[10].DUT_2/out0
+    SLICE_X1Y59          LDPE                                         f  genblk1[10].DUT_2/out_reg/PRE
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 chal_i[11]
+                            (input port)
+  Destination:            genblk1[13].DUT_2/out_reg/PRE
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        1.057ns  (logic 0.360ns (34.020%)  route 0.698ns (65.980%))
+  Logic Levels:           3  (IBUF=1 LUT2=1 LUT3=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    T13                                               0.000     0.000 r  chal_i[11] (IN)
+                         net (fo=0)                   0.000     0.000    chal_i[11]
+    T13                  IBUF (Prop_ibuf_I_O)         0.270     0.270 r  chal_i_IBUF[11]_inst/O
+                         net (fo=32, routed)          0.466     0.736    genblk1[13].DUT_1/chal_i_IBUF[11]
+    SLICE_X2Y60          LUT3 (Prop_lut3_I1_O)        0.045     0.781 r  genblk1[13].DUT_1/path1_inferred_i_1/O
+                         net (fo=2, routed)           0.060     0.841    genblk1[13].DUT_2/out_reg_0[0]
+    SLICE_X2Y60          LUT2 (Prop_lut2_I1_O)        0.045     0.886 f  genblk1[13].DUT_2/out_reg_i_2__12/O
+                         net (fo=1, routed)           0.171     1.057    genblk1[13].DUT_2/out0
+    SLICE_X2Y60          LDPE                                         f  genblk1[13].DUT_2/out_reg/PRE
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 chal_i[10]
+                            (input port)
+  Destination:            genblk1[8].DUT_2/out_reg/PRE
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        1.124ns  (logic 0.385ns (34.250%)  route 0.739ns (65.750%))
+  Logic Levels:           4  (IBUF=1 LUT2=1 LUT3=2)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    R16                                               0.000     0.000 r  chal_i[10] (IN)
+                         net (fo=0)                   0.000     0.000    chal_i[10]
+    R16                  IBUF (Prop_ibuf_I_O)         0.250     0.250 r  chal_i_IBUF[10]_inst/O
+                         net (fo=32, routed)          0.431     0.681    genblk1[8].DUT_1/chal_i_IBUF[10]
+    SLICE_X1Y68          LUT3 (Prop_lut3_I1_O)        0.045     0.726 r  genblk1[8].DUT_1/path0_inferred_i_2/O
+                         net (fo=2, routed)           0.057     0.784    genblk1[8].DUT_1/path0[11]
+    SLICE_X1Y68          LUT3 (Prop_lut3_I0_O)        0.045     0.829 r  genblk1[8].DUT_1/path1_inferred_i_1/O
+                         net (fo=2, routed)           0.134     0.962    genblk1[8].DUT_2/out_reg_0[0]
+    SLICE_X3Y68          LUT2 (Prop_lut2_I1_O)        0.045     1.007 f  genblk1[8].DUT_2/out_reg_i_2__7/O
+                         net (fo=1, routed)           0.116     1.124    genblk1[8].DUT_2/out0
+    SLICE_X3Y68          LDPE                                         f  genblk1[8].DUT_2/out_reg/PRE
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 chal_i[10]
+                            (input port)
+  Destination:            genblk1[12].DUT_2/out_reg/PRE
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        1.155ns  (logic 0.385ns (33.338%)  route 0.770ns (66.662%))
+  Logic Levels:           4  (IBUF=1 LUT2=1 LUT3=2)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    R16                                               0.000     0.000 r  chal_i[10] (IN)
+                         net (fo=0)                   0.000     0.000    chal_i[10]
+    R16                  IBUF (Prop_ibuf_I_O)         0.250     0.250 r  chal_i_IBUF[10]_inst/O
+                         net (fo=32, routed)          0.370     0.620    genblk1[12].DUT_1/chal_i_IBUF[10]
+    SLICE_X0Y69          LUT3 (Prop_lut3_I1_O)        0.045     0.665 r  genblk1[12].DUT_1/path0_inferred_i_2/O
+                         net (fo=2, routed)           0.156     0.821    genblk1[12].DUT_1/path0[11]
+    SLICE_X0Y68          LUT3 (Prop_lut3_I0_O)        0.045     0.866 r  genblk1[12].DUT_1/path1_inferred_i_1/O
+                         net (fo=2, routed)           0.069     0.935    genblk1[12].DUT_2/out_reg_0[0]
+    SLICE_X0Y68          LUT2 (Prop_lut2_I1_O)        0.045     0.980 f  genblk1[12].DUT_2/out_reg_i_2__11/O
+                         net (fo=1, routed)           0.175     1.155    genblk1[12].DUT_2/out0
+    SLICE_X0Y68          LDPE                                         f  genblk1[12].DUT_2/out_reg/PRE
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 chal_i[10]
+                            (input port)
+  Destination:            genblk1[7].DUT_2/out_reg/PRE
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        1.246ns  (logic 0.385ns (30.882%)  route 0.861ns (69.118%))
+  Logic Levels:           4  (IBUF=1 LUT2=1 LUT3=2)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    R16                                               0.000     0.000 r  chal_i[10] (IN)
+                         net (fo=0)                   0.000     0.000    chal_i[10]
+    R16                  IBUF (Prop_ibuf_I_O)         0.250     0.250 r  chal_i_IBUF[10]_inst/O
+                         net (fo=32, routed)          0.578     0.828    genblk1[7].DUT_1/chal_i_IBUF[10]
+    SLICE_X1Y66          LUT3 (Prop_lut3_I1_O)        0.045     0.873 r  genblk1[7].DUT_1/path0_inferred_i_2/O
+                         net (fo=2, routed)           0.057     0.930    genblk1[7].DUT_1/path0[11]
+    SLICE_X1Y66          LUT3 (Prop_lut3_I0_O)        0.045     0.975 r  genblk1[7].DUT_1/path1_inferred_i_1/O
+                         net (fo=2, routed)           0.110     1.085    genblk1[7].DUT_2/out_reg_0[0]
+    SLICE_X1Y65          LUT2 (Prop_lut2_I1_O)        0.045     1.130 f  genblk1[7].DUT_2/out_reg_i_2__6/O
+                         net (fo=1, routed)           0.116     1.246    genblk1[7].DUT_2/out0
+    SLICE_X1Y65          LDPE                                         f  genblk1[7].DUT_2/out_reg/PRE
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 chal_i[10]
+                            (input port)
+  Destination:            genblk1[6].DUT_2/out_reg/PRE
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        1.295ns  (logic 0.385ns (29.720%)  route 0.910ns (70.280%))
+  Logic Levels:           4  (IBUF=1 LUT2=1 LUT3=2)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    R16                                               0.000     0.000 r  chal_i[10] (IN)
+                         net (fo=0)                   0.000     0.000    chal_i[10]
+    R16                  IBUF (Prop_ibuf_I_O)         0.250     0.250 r  chal_i_IBUF[10]_inst/O
+                         net (fo=32, routed)          0.510     0.760    genblk1[6].DUT_1/chal_i_IBUF[10]
+    SLICE_X1Y67          LUT3 (Prop_lut3_I1_O)        0.045     0.805 r  genblk1[6].DUT_1/path0_inferred_i_2/O
+                         net (fo=2, routed)           0.156     0.962    genblk1[6].DUT_1/path0[11]
+    SLICE_X0Y66          LUT3 (Prop_lut3_I0_O)        0.045     1.007 r  genblk1[6].DUT_1/path1_inferred_i_1/O
+                         net (fo=2, routed)           0.069     1.075    genblk1[6].DUT_2/out_reg_0[0]
+    SLICE_X0Y66          LUT2 (Prop_lut2_I1_O)        0.045     1.120 f  genblk1[6].DUT_2/out_reg_i_2__5/O
+                         net (fo=1, routed)           0.175     1.295    genblk1[6].DUT_2/out0
+    SLICE_X0Y66          LDPE                                         f  genblk1[6].DUT_2/out_reg/PRE
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 chal_i[11]
+                            (input port)
+  Destination:            genblk1[15].DUT_2/out_reg/PRE
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        1.299ns  (logic 0.360ns (27.684%)  route 0.940ns (72.316%))
+  Logic Levels:           3  (IBUF=1 LUT2=1 LUT3=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    T13                                               0.000     0.000 r  chal_i[11] (IN)
+                         net (fo=0)                   0.000     0.000    chal_i[11]
+    T13                  IBUF (Prop_ibuf_I_O)         0.270     0.270 r  chal_i_IBUF[11]_inst/O
+                         net (fo=32, routed)          0.520     0.789    genblk1[15].DUT_1/chal_i_IBUF[11]
+    SLICE_X0Y60          LUT3 (Prop_lut3_I1_O)        0.045     0.834 f  genblk1[15].DUT_1/path0_inferred_i_1/O
+                         net (fo=2, routed)           0.249     1.083    genblk1[15].DUT_2/out_reg_1[0]
+    SLICE_X1Y60          LUT2 (Prop_lut2_I0_O)        0.045     1.128 f  genblk1[15].DUT_2/out_reg_i_2__14/O
+                         net (fo=1, routed)           0.171     1.299    genblk1[15].DUT_2/out0
+    SLICE_X1Y60          LDPE                                         f  genblk1[15].DUT_2/out_reg/PRE
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 chal_i[11]
+                            (input port)
+  Destination:            genblk1[5].DUT_2/out_reg/PRE
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        1.326ns  (logic 0.360ns (27.118%)  route 0.967ns (72.882%))
+  Logic Levels:           3  (IBUF=1 LUT2=1 LUT3=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    T13                                               0.000     0.000 r  chal_i[11] (IN)
+                         net (fo=0)                   0.000     0.000    chal_i[11]
+    T13                  IBUF (Prop_ibuf_I_O)         0.270     0.270 r  chal_i_IBUF[11]_inst/O
+                         net (fo=32, routed)          0.723     0.993    genblk1[5].DUT_1/chal_i_IBUF[11]
+    SLICE_X0Y64          LUT3 (Prop_lut3_I1_O)        0.045     1.038 r  genblk1[5].DUT_1/path1_inferred_i_1/O
+                         net (fo=2, routed)           0.069     1.107    genblk1[5].DUT_2/out_reg_0[0]
+    SLICE_X0Y64          LUT2 (Prop_lut2_I1_O)        0.045     1.152 f  genblk1[5].DUT_2/out_reg_i_2__4/O
+                         net (fo=1, routed)           0.175     1.326    genblk1[5].DUT_2/out0
+    SLICE_X0Y64          LDPE                                         f  genblk1[5].DUT_2/out_reg/PRE
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 chal_i[10]
+                            (input port)
+  Destination:            genblk1[11].DUT_2/out_reg/PRE
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        1.329ns  (logic 0.385ns (28.971%)  route 0.944ns (71.029%))
+  Logic Levels:           4  (IBUF=1 LUT2=1 LUT3=2)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    R16                                               0.000     0.000 r  chal_i[10] (IN)
+                         net (fo=0)                   0.000     0.000    chal_i[10]
+    R16                  IBUF (Prop_ibuf_I_O)         0.250     0.250 r  chal_i_IBUF[10]_inst/O
+                         net (fo=32, routed)          0.518     0.768    genblk1[11].DUT_1/chal_i_IBUF[10]
+    SLICE_X1Y71          LUT3 (Prop_lut3_I1_O)        0.045     0.813 r  genblk1[11].DUT_1/path0_inferred_i_2/O
+                         net (fo=2, routed)           0.190     1.003    genblk1[11].DUT_1/path0[11]
+    SLICE_X2Y71          LUT3 (Prop_lut3_I0_O)        0.045     1.048 r  genblk1[11].DUT_1/path1_inferred_i_1/O
+                         net (fo=2, routed)           0.060     1.109    genblk1[11].DUT_2/out_reg_0[0]
+    SLICE_X2Y71          LUT2 (Prop_lut2_I1_O)        0.045     1.154 f  genblk1[11].DUT_2/out_reg_i_2__10/O
+                         net (fo=1, routed)           0.175     1.329    genblk1[11].DUT_2/out0
+    SLICE_X2Y71          LDPE                                         f  genblk1[11].DUT_2/out_reg/PRE
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 chal_i[11]
+                            (input port)
+  Destination:            genblk1[14].DUT_2/out_reg/PRE
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        1.397ns  (logic 0.360ns (25.739%)  route 1.038ns (74.261%))
+  Logic Levels:           3  (IBUF=1 LUT2=1 LUT3=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    T13                                               0.000     0.000 r  chal_i[11] (IN)
+                         net (fo=0)                   0.000     0.000    chal_i[11]
+    T13                  IBUF (Prop_ibuf_I_O)         0.270     0.270 r  chal_i_IBUF[11]_inst/O
+                         net (fo=32, routed)          0.558     0.828    genblk1[14].DUT_1/chal_i_IBUF[11]
+    SLICE_X1Y61          LUT3 (Prop_lut3_I1_O)        0.045     0.873 f  genblk1[14].DUT_1/path0_inferred_i_1/O
+                         net (fo=2, routed)           0.305     1.178    genblk1[14].DUT_2/out_reg_1[0]
+    SLICE_X0Y61          LUT2 (Prop_lut2_I0_O)        0.045     1.223 f  genblk1[14].DUT_2/out_reg_i_2__13/O
+                         net (fo=1, routed)           0.175     1.397    genblk1[14].DUT_2/out0
+    SLICE_X0Y61          LDPE                                         f  genblk1[14].DUT_2/out_reg/PRE
+  -------------------------------------------------------------------    -------------------
+
+
+
+
+
