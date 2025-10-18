@@ -6,6 +6,9 @@
 ---
 
 ## New Update
+___Physical Unclonable Function___ <br>
+
+NOTE: in BRAM_PUF: there is no such thing as BRAM PUF, i tried it didnt work, i thought BRAM will work similiar to SRAM, nope. i just continued in the same project i didnt even bother to change the name of it, so its not BRAM_PUF its Arbitary_PUF. Purely __Combinotorial__.
 ___BRAM_PUF___: I have uploaded my entire project directory with .xpr ready to be imported in xilix vivado. Thing is to give a unique identity for the hardware i was looking on youtube, there i watch the synopsis video explaining how SRAM PUF can change crytography and cybersecurity. So i went through a paper of some japnese and indian dude working together to demonstrate the APUF for hardware legitmacy test using the same fpga as i am using and a jetson nano. the APUF algorithm that i used is same as there, silightly diffrent, to make it in observable range of limited IO ports of the fpga fabric.
 
 The main thing is that i have noted the results for this small scale research. <br>
