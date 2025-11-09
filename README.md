@@ -6,22 +6,13 @@
 ---
 
 ## New Update
-___Physical Unclonable Function___ <br>
 
-NOTE: in BRAM_PUF: there is no such thing as BRAM PUF, i tried it didnt work, i thought BRAM will work similiar to SRAM, nope. i just continued in the same project i didnt even bother to change the name of it, so its not BRAM_PUF its Arbitary_PUF. Purely __Combinotorial__.
+___SHA256_testing_ground___: <br> i decided to use sha256 for hasing purposes since my requirement was for local machine and it is far more secured than what I need. also doing hasing costs a lot of silicon. at the current stage it consumes my 45% of total resources availabe on the fabric which is too much. the core and its register interface was from github cuz i have no intreset in creating my own hash function. i used the core to make a state machine that just hashes content of memory. it is like a storage box where i put my trash to get hashed. Makiung a state machine was not that difficult but it costs me some registers and flipflops. currently that logic i use for the state machine is not fpga friendly. the transtions are supposed to be multiple of 16. since indexing start from zero it will be stupid to use the bus width equal to the 2^n, it will offer me the count till 2^n - 1, in my logic i need to check if the value exceeds that, but adding 1 will only reset the count to 0 so it will never transist in the next state . to prevent that i had to use another additinal bit taht cause me to generate the possiblities extend to twic but out of that huge number i am using only one which is definelty waste of resource. i will optimize the state machine later, now that i have got the hash function which was indeed my primary goal too i will add nopw the trng (truly random number generation function) which was the most cool goal, using the memory where the vote daya will be stired to pass through a function of hash and from that hash function will be genrated is truly awesome. That was the primary research and discovery in EVM. we cant predict votes and times both of peoples so we we can use it to genrate random numbers that will help me to generate the initila number for DIFI Hellman, So every time new key will be generated for the communication and storing the votes is the memory securely.
 
-___BRAM_PUF___: I have uploaded my entire project directory with .xpr ready to be imported in xilix vivado. Thing is to give a unique identity for the hardware i was looking on youtube, there i watch the synopsis video explaining how SRAM PUF can change crytography and cybersecurity. So i went through a paper of some japnese and indian dude working together to demonstrate the APUF for hardware legitmacy test using the same fpga as i am using and a jetson nano. the APUF algorithm that i used is same as there, silightly diffrent, to make it in observable range of limited IO ports of the fpga fabric.
+trng is easy to make, i will make it later, lets go to difficult part first, yes. the problem that was not solved even till this day, How to authenticate a user without its unique details. Even banking need UPI id to authenticate real users, you cant authentiocate without some unique features such as biometrics, faces or even name. But what if i say there is a way you can do that. That s the point of voting you know, Nveer share your name while voting so to verify the user and its legitmacy, there is a way where we dont need unique IDs,
 
-The main thing is that i have noted the results for this small scale research. <br>
-
-<img name="Results" width="670" height="407" alt="Screenshot 2025-10-18 130641" src="https://github.com/user-attachments/assets/97b8b9d7-64a7-4aa6-a186-4bd95110caaa" />
-
-according to the PUF paper the unique and usbale Challenges were about 75 percent, currently with my data i am therotically close.
-
-Conclusions:
- - since research is already done i can relay on the fact that 75 percent of the total challenges are usable. so i will not pursue the robust way to test all the testcases.
- - There might be a way that will allow me to floorplan my implemented design of diffrent blocks of fabric, that will give me uniqueness in Silicon structure, this way i will eliminate the need of testing this module on more than plus 10 fpga like the researchers.
- - Now that i can see that APUF actually works, i can add more layers and coloumns to it to increases the complexity of output and generate a more advance form of hardware fingerprint, but before that i will need to figure out the signing with private key problem.
+Btw this a re the test results of the state machine of teh SHA-256 
+<img width="829" height="512" alt="SHA_256_testing_grounds" src="https://github.com/user-attachments/assets/350d9f1c-d93e-4a4e-9c31-955e923bd52a" />
 
 ---
 
@@ -130,3 +121,20 @@ the waves after status are actually the outputs of each layer to show they are p
 <img width="1306" height="1061" alt="Screenshot 2025-09-20 212953" src="https://github.com/user-attachments/assets/c24e3b6f-a7a1-4e11-966e-4a3ad25356a1" />
 ## Decrypter Simulation Result (sequential)
 <img width="653" height="533" alt="Decrypter" src="https://github.com/user-attachments/assets/34548192-a132-4a83-89f6-bf88e176043d" />
+
+## Physical Unclonable Function
+
+NOTE: in BRAM_PUF: there is no such thing as BRAM PUF, i tried it didnt work, i thought BRAM will work similiar to SRAM, nope. i just continued in the same project i didnt even bother to change the name of it, so its not BRAM_PUF its Arbitary_PUF. Purely __Combinotorial__.
+
+___BRAM_PUF___: I have uploaded my entire project directory with .xpr ready to be imported in xilix vivado. Thing is to give a unique identity for the hardware i was looking on youtube, there i watch the synopsis video explaining how SRAM PUF can change crytography and cybersecurity. So i went through a paper of some japnese and indian dude working together to demonstrate the APUF for hardware legitmacy test using the same fpga as i am using and a jetson nano. the APUF algorithm that i used is same as there, silightly diffrent, to make it in observable range of limited IO ports of the fpga fabric.
+
+The main thing is that i have noted the results for this small scale research. <br>
+
+<img name="Results" width="670" height="407" alt="Screenshot 2025-10-18 130641" src="https://github.com/user-attachments/assets/97b8b9d7-64a7-4aa6-a186-4bd95110caaa" />
+
+according to the PUF paper the unique and usbale Challenges were about 75 percent, currently with my data i am therotically close.
+
+Conclusions:
+ - since research is already done i can relay on the fact that 75 percent of the total challenges are usable. so i will not pursue the robust way to test all the testcases.
+ - There might be a way that will allow me to floorplan my implemented design of diffrent blocks of fabric, that will give me uniqueness in Silicon structure, this way i will eliminate the need of testing this module on more than plus 10 fpga like the researchers.
+ - Now that i can see that APUF actually works, i can add more layers and coloumns to it to increases the complexity of output and generate a more advance form of hardware fingerprint, but before that i will need to figure out the signing with private key problem.
